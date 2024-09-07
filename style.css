@@ -1,0 +1,952 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: 'Next';
+    src: url('/fonts/next-font.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: Next,sans-serif;
+    height: 200vh;
+    position: relative;
+}
+
+
+.navbar {
+    position: fixed; /* Fixed positioning to stay on top */
+    padding-left: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+    color: white;
+    background-color: transparent; /* Initially transparent */
+}
+
+
+
+
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+
+}
+
+.navbar-content1{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo {
+width: 20%;
+height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #54BBBD; /* Hover text color */
+}
+.login a:hover{
+        color: #54BBBD; /* Hover text color */
+}
+
+.login a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(255, 255, 255);
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hidden checkbox for menu toggle */
+.menu-toggle {
+    display: none;
+}
+
+
+
+/* Dropdown menu style */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Video Background Section */
+.video-background {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire section */
+}
+
+.paragraph-about{
+    width: 100%;
+    height: 40vh;
+    text-align: right;
+    text-indent: 10px;
+}
+
+.paragraph-about h3{
+    color: #523C99;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.paragraph-about p{
+    width: 60%;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.ul-icon{
+     text-indent: 20px; display: flex; flex-direction: column; gap: 10px;
+}
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5e72e480; /* Purple overlay with 50% transparency */
+    pointer-events: none; /* Allow interaction with elements underneath */
+}
+
+/* The div that will be above the video */
+.overlay-div {
+    position: absolute;
+    top: 30%; /* Adjust top position as needed */
+    left: 0;
+    width: 100%;
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure the div is above the video */
+}
+
+.header-video{
+    width: 30%;
+    font-size: 5rem;
+    height: 100%;
+    font-weight: bolder;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.location{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.frame{
+    border:0; border-radius: 20px; width:600px; height:450px;
+}
+.map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.locationtext{
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    text-indent: 20px;
+    font-size: 1.2rem;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #523C99;
+    width: 100%;
+    height: 60vh;
+    gap: 20px;
+}
+
+.footer-row1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+height: 20vh;
+}
+
+.footer-list1{
+text-align: center;
+}
+
+.footer-list1 ul{
+    list-style: none;
+  
+}
+
+.footer-list1 ul li a{
+text-decoration: none;
+color: black;
+}
+
+.icon-list{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.archiv-button{
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-image: url(./image/icon1-f.svg);}
+
+    .x-button{
+        border: none;
+        background-color: transparent;
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-image: url(./image/icon2-f.svg);}
+
+
+            .youtube-button{
+                border: none;
+                background-color: transparent;
+                height: 24px;
+                width: 24px;
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+                background-image: url(./image/icon3-f.svg);}
+
+                .linkedIn-button{
+                    border: none;
+                    background-color: transparent;
+                    height: 24px;
+                    width: 24px;
+                    background-repeat: no-repeat;
+                    background-size: 24px 24px;
+                    background-image: url(./image/icon5-f.svg);}
+    
+                 .row-footer{
+                        display: flex;
+                        gap: 13px;
+                        justify-content: space-evenly;
+                    }
+
+                .snap-button{
+                    border: none;
+                    background-color: transparent;
+                    height: 24px;
+                    width: 24px;
+                    background-repeat: no-repeat;
+                    background-size: 24px 24px;
+                    background-image: url(./image/icon4-f.svg);}
+
+.header-video button{
+    width: 100%;
+    height: 10vh;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: #54BBBD;
+    color: white;
+    border: none
+}
+
+.footer-row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.who-sction{
+    width: 100%;
+    height: 100vh;
+}
+
+.part1{
+    background-color: white;
+    width: 20%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.part1 h1{
+    color: #523C99;
+}
+
+.who-sction2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    gap: 20px;
+}
+
+.servies h1{
+    color: #523C99;
+    font-weight: bolder;
+}
+.servies{
+    background-color: #F5F6FA;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.compatative{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.compatative-row{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.s-row1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+.box1{
+    background-color: white;
+    width: 20%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.box15{
+    background-color: white;
+    width: 20%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.compatative h3{
+    color: #523C99;
+    font-weight: bolder;
+}
+
+.navbar.scrolled {
+    background-color: white; /* Background color after scrolling */
+}
+
+.navbar.scrolled .nav-links a:hover,.navbar.scrolled .login a:hover{
+    color: #54BBBD;
+}
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .login a {
+    color: black; /* Text color for links after scrolling */
+}
+
+.content-program{
+    background-color: #F2F4F7;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.box1r{
+    display: none;
+}
+.content-program h1{
+    color:#4E37B0;
+    font-weight: bold;
+}
+
+.acdmic-join h1{
+    color:#4E37B0;
+    font-weight: bold;
+}
+
+
+
+.program1{
+     height: 100%; 
+     border-radius: 10px;
+     width: 100%;
+}
+
+
+.col2{
+    display: flex;
+    width: 30vw;
+    height: 40vh;
+
+}
+
+.line1{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.line2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content-program button ,.acdimac-number button{
+    border-radius: 15px; 
+    color:#523C99; 
+    border-color: #523C99;
+     width:15vw; 
+     height: 5vh;
+}
+
+
+.acdimac-number{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.acdimic-activity{
+      background-color:#4E37B0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+}
+.acdimic-activity h1{
+    color:white;
+    font-weight: bold;
+}
+
+.acdimac-number h1{
+    color:#4E37B0;
+    font-weight: bold;
+}
+
+.card21{
+    display: flex;
+     justify-content: center; 
+     align-items: center; 
+     height: 40vh;
+     width: 13vw;
+     box-shadow: 10px 10px 15px 5px rgba(128, 128, 128, 0.5); /* Gray shadow */
+     border-radius: 10px;
+    }
+
+.acdmic-news{
+    width: 100%;
+    background-color: #5BBEC2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.div-form{
+    display: flex; justify-content: center; align-items: center; gap:10px;
+}
+
+.form-group input{
+    height:5vh;
+}
+
+.form-group button{
+    width: 10vw; border-radius: 10px; background-color: #8159A9; color: white; height:5vh;
+}
+
+    .card31{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 60vh;
+        width: 20vw;
+        margin-top: 20px;
+        box-shadow: 10px 10px 15px 5px rgba(128, 128, 128, 0.5); /* Gray shadow */
+        border-radius: 10px;
+
+    }
+
+.cardbody2{
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;
+    text-align: center;
+}
+
+.cardbody3{
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;
+    text-align: center;
+}
+
+.cardimg{
+    width: 40%;
+     border: 4px solid #91D8DB;
+      border-radius: 30%;
+}
+
+.cardimg2{
+    width: 40%;
+      border-radius: 4%;
+}
+
+
+.row-number{
+    width: 80vw; height: 40vh;
+}
+
+.acdmic-join{
+    background-color: lightgray;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.company-join-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.company-join{
+    width: 15vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.company-join img{
+    width: 10vw;
+    height: 10vh;
+
+}
+
+.row-activity{
+    width: 80vw; height: 70vh;
+
+}
+
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .navbar-content{
+        width: 50%;
+       justify-content: start;
+   }
+    .logo {
+        width: 100%;
+        height: 12vh;
+        }
+        
+    .nav-links {
+        display: none;
+    }
+
+    .login {
+        display: none;
+    }
+
+
+    .burger-menu {
+        color: white;
+        display: block;
+        margin-left:10px ;
+        border: 1px solid white;
+        border-radius: 10%;
+        text-align: center;
+        width: 8vw;
+        font-size: 1.9rem;
+    }
+
+    .navbar.scrolled .burger-menu{
+        color: black;
+        border: 1px solid black;
+
+    }
+    
+    .menu-toggle:checked ~ .dropdown-menu {
+        display: block;
+    }
+    
+    .menu-toggle:checked ~ .burger-menu{
+        color: black;
+        border: 1px solid black;
+    }
+
+    .header-video{
+        width: 100%;
+    }
+
+    .col2{
+        display: flex;
+        width: 100%;
+        height: 50vh;
+   
+    }
+    .row{
+         width: 100vw; 
+        }
+         .content-program{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 200vh;
+
+         }
+
+         .content-program button , .acdimac-number button{
+            width: 60vw;
+            height: 6vh;
+         }
+
+         .card21{
+            display: flex;
+             justify-content: center; 
+             align-items: center; 
+             height: 40vh;
+             width: 50vw;
+             box-shadow: 10px 10px 15px 5px rgba(128, 128, 128, 0.5); /* Gray shadow */
+             border-radius: 10px;
+            }
+      
+
+            .row-number{
+                width: 90vw; height: 90vh; 
+                margin-top: 30px;
+
+           }
+
+
+           .cardbody2{
+            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px;
+            text-align: center;
+        }
+        .change{
+            margin-bottom: 30px;
+        }
+
+        .row-activity{
+            width: 90vw; height: 100vh;
+        }
+
+            .cardbody3{
+                display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px;
+                text-align: center;
+            }
+        
+            .col4{
+                display: flex;
+                width: 100%;
+                
+            }
+
+
+            .card31{
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                height: 60vh;
+                width: 100vw;
+                margin-top: 20px;
+                box-shadow: 10px 10px 15px 5px rgba(128, 128, 128, 0.5); /* Gray shadow */
+                border-radius: 10px;
+        
+            }
+
+            .acdimic-activity{
+                margin-top: 30px;
+                height: 270vh;
+            }
+
+            .acdmic-join{
+                margin-top: 20px;
+                height: 60vh;
+
+            }
+
+           
+      .company-join-row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+      }
+      .company-join{
+        width: 40vw;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+      }    
+
+      .div-form{
+        display: flex;  flex-direction:column; justify-content:center; align-items: center; 
+        width: 100vw;
+    }
+    .div-form input, .div-form button{
+        width: 80vw;
+    }
+
+
+    .footer-row1{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .row-footer{
+        display: flex;
+        gap: 13px;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #523C99;
+        width: 100%;
+        height: 65vh;
+    }
+
+    .ul-icon{
+        margin-top: 30px;
+    }
+
+    .paragraph-about{
+        width: 100%;
+        height: 40vh;
+        text-align: right;
+        text-indent: 10px;
+    }
+    
+    .paragraph-about h3{
+        color: #523C99;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+    .paragraph-about p{
+        width: 80%;
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+
+ 
+    .who-sction2{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        gap: 20px;
+    }
+    .part1{
+        background-color: white;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+    }
+
+    .who-sction{
+        width: 100%;
+        height: 150vh;
+    }
+
+    .s-row1{
+     display: none;
+
+    }
+    .s-row1r{
+        width: 100%;
+        height: 40vh;
+        display: flex;align-items: center;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .box1r{
+        background-color: white;
+        width: 40%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .servies{
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #F5F6FA
+    }
+
+    .compatative-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+
+    .box15{
+        width: 100%;
+        
+    }
+    
+    .compatative{
+        height: 80%;
+    }
+   
+
+    .locationtext{
+        width: 50vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        font-size: 0.6rem;
+        flex-direction: column;
+    }
+    .locationtext p{
+        margin-right: 10px;
+    }
+    .location{
+        background-color: rgb(252, 253, 253);
+        height: 50vh;
+    }
+
+    .frame{
+        border:0; border-radius: 20px; width:200px; height:200px; margin-left: -50px;
+    }
+
+        }
